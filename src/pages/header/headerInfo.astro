@@ -1,10 +1,19 @@
-<div class="flex flex- gap-x-2">
-    <div class="flex flex-col justify-center items-center">
-        <span class="text-white">+54 2255 - 5555 56</span>
-        <span class="text-white">Presupuesto sin cargo</span>
+---
+import Instagramsvg from "./svg/instagramsvg.astro";
+import Whatsappsvg from "./svg/whatsappsvg.astro";
+---
+
+<div class="flex flex- gap-x-4">
+    <div class="flex flex-col justify-center items-start">
+        <span class="text-white text-xl">+54 2255 - 5555 56</span>
+        <span class="text-yellow-300 text-sm">Presupuesto sin cargo</span>
     </div>
-    <div class="flex flex-row gap-x-2">
-        <span class="text-white">IG</span>
-        <span class="text-white">WHP</span>
+    <div class="flex flex-row items-start gap-x-3 h-full drop-shadow-xl">
+        <a href="https://wa.me/542255555556" target="_blank">
+            <Instagramsvg></Instagramsvg>
+        </a>
+        <a href="https://www.instagram.com/detec_se/" >
+            <Whatsappsvg></Whatsappsvg>
+        </a>
     </div>
 </div>
