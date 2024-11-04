@@ -1,34 +1,56 @@
 ---
-import Header from "./header/header.astro"
-import Main from "./main/main.astro"
+import Header from "./header/header.astro";
+import Main from "./main/main.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta http-equiv="Content-Language" content="es">
-		<meta name="description" content="Ofrecemos servicios de electricidad profesional en Mar del Plata. Instalaciones, reparaciones y mantenimiento eléctrico de calidad.">
-		<meta name="keywords" content="electricidad, electricistas, Mar del Plata, villa gesell, pinamar, instalaciones eléctricas, mantenimiento">
-		<meta name="robots" content="index, follow">
-		<meta property="og:title" content="Servicios de Electricidad - Villa Gesell, Mar del Plata">
-		<meta property="og:description" content="Ofrecemos servicios de electricidad profesional.">
-		<script src="/service.js" defer></script>
-		<title>DETEC SE - ELECTRICISTAS</title>
-	</head>
-	<body class="flex flex-col h-dvh overflow-hidden">
-		<Header></Header>
-		<Main></Main>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta
+      name="description"
+      content="Ofrecemos servicios de electricidad profesional en Mar del Plata. Instalaciones, reparaciones y mantenimiento eléctrico de calidad."
+    />
+    <meta
+      name="keywords"
+      content="electricidad, electricistas, Mar del Plata, villa gesell, pinamar, instalaciones eléctricas, mantenimiento"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Servicios de Electricidad - Villa Gesell, Mar del Plata"
+    />
+    <meta
+      property="og:description"
+      content="Ofrecemos servicios de electricidad profesional."
+    />
+    <title>DETEC SE - ELECTRICISTAS</title>
+  </head>
+  <body class="flex flex-col h-dvh overflow-hidden">
+    <Header />
+    <Main />
+  </body>
 </html>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
-	*{
-		font-family: "Electrolize", system-ui;
-		font-weight: 400;
-		font-style: normal;   
-	}	
+  @import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+  * {
+    font-family: "Electrolize", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
 </style>
+<script>
+  const updateCounterNumber = async () => {
+    const apiKey = import.meta.env.PUBLIC_API_KEY;
+    fetch("https://vcaserver.onrender.com/hit/2/2916561372", {
+      headers: {
+        API_KEY: apiKey,
+      },
+    }).then((response) => {});
+  };
+  updateCounterNumber();
+</script>
